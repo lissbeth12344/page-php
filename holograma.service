@@ -1,0 +1,16 @@
+[Unit]
+Description=Servicio MQTT del holograma (modo usuario)
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/andrea/claves/aga/venv/bin/python /home/andrea/claves/aga/raspberry_iotCOPIA.py
+WorkingDirectory=/home/andrea/claves/aga
+Restart=always
+RestartSec=5
+
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/andrea/.Xauthority
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target
