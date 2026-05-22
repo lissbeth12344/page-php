@@ -225,12 +225,10 @@ $departamento = $_SESSION['departamento'];
                     <p>Subir archivos a S3</p>
                 </a>
                 <a href="admin_usuarios.php" class="menu-card">
-                    <div class="menu-icon">👥</div>
                     <h3>Crear usuarios</h3>
                     <p>Dar de alta nuevos clientes</p>
                 </a>
                 <a href="admin_solicitudes.php" class="menu-card">
-                    <div class="menu-icon">📬</div>
                     <h3>Solicitudes</h3>
                     <p>Ver mensajes de contacto</p>
                 </a>    
@@ -262,7 +260,7 @@ $departamento = $_SESSION['departamento'];
                 </a>
             </div>
             <div style="background: #d1ecf1; padding: 15px; border-radius: 15px; margin-top: 30px; color: #0c5460; text-align: center;">
-                <strong>ℹ Panel de cliente</strong><br>
+                <strong>Panel de cliente</strong><br>
                 Puedes ver y descargar tus diseños. Si quieres enviar nuevos, contacta con el administrador.
             </div>
         <?php endif; ?>
