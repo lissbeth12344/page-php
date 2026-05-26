@@ -11,7 +11,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 'admin') {
 // Incluir AWS SDK
 require_once '/var/www/html/vendor/autoload.php';
 use Aws\S3\S3Client;
-
+// aqui se crea el objeto para comunicarse con S3 
 $s3 = new S3Client([
     'version' => 'latest',
     'region'  => AWS_REGION,
@@ -23,7 +23,7 @@ $s3 = new S3Client([
 
 $mensaje = '';
 $tipo_mensaje = '';
-
+// aqui se guarda los archivos con todos los parametros
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['archivo'])) {
     $archivo = $_FILES['archivo'];
     $nombre = basename($archivo['name']);
